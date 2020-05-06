@@ -5,6 +5,6 @@ RUN apt-get update && apt-get -y upgrade && \
     nano wget curl && \
     apt-get clean && rm -rf /var/lib/apt/lists/
 
+RUN mkdir bitcoin && cd bitcoin
 RUN curl -o bitcoin.tar.gz https://bitcoin.org/bin/bitcoin-core-0.19.1/bitcoin-0.19.1-x86_64-linux-gnu.tar.gz
-RUN mkdir bitcoin
-RUN tar -xvf bitcoin.tar.gz --strip-components 1 ./bitcoin
+RUN tar -xvf bitcoin.tar.gz --strip-components 1
