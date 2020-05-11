@@ -9,4 +9,4 @@ RUN curl -o bitcoin.tar.gz https://bitcoin.org/bin/bitcoin-core-0.19.1/bitcoin-0
 RUN tar -xvf bitcoin.tar.gz --strip-components 1
 COPY /entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-ENTRYPOINT ["/data/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
